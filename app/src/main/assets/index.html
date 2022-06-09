@@ -8,14 +8,25 @@
     <title>Document</title>
 </head>
 <body>
+    <noscript>
+        <strong>We're sorry but it doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
     <h1 id="test1">test</h1>
     <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
 
+    <button onClick="changeText()">change float text</button>
     <script type="text/javascript">
+        document.getElementById('test1').innerHTML = 'tetetete';
+
         function showAndroidToast(toast) {
             console.info(JSON.stringify(window.navigator))
             Android.showToast(toast)
-        }
+        };
+
+        function changeText() {
+            var a = Math.floor(Math.random() * 100)
+            Android.changeFloatText(a + ' had changed?')
+        };
     </script>
 </body>
 </html>

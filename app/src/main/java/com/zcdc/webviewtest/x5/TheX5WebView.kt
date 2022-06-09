@@ -23,7 +23,7 @@ class TheX5WebView(arg0: Context, arg1: AttributeSet) : WebView(arg0, arg1) {
     }
 
     @SuppressLint("SetJavaScriptEnabled")
-    fun initWebViewSettings() {
+    private fun initWebViewSettings() {
         val mWebSettings: WebSettings = this.settings
         mWebSettings.javaScriptCanOpenWindowsAutomatically = true
         mWebSettings.allowFileAccess = true
@@ -36,6 +36,6 @@ class TheX5WebView(arg0: Context, arg1: AttributeSet) : WebView(arg0, arg1) {
         mWebSettings.domStorageEnabled = true
         mWebSettings.setGeolocationEnabled(true)
         mWebSettings.cacheMode = WebSettings.LOAD_NO_CACHE
-        mWebSettings.javaScriptEnabled = true
+        mWebSettings.setJavaScriptEnabled(true)
     }
 }
