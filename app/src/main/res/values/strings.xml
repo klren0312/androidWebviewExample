@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WebViewTest</string>
+    <string name="robot">robot</string>
 </resources>

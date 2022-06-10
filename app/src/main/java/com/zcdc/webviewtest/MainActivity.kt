@@ -11,11 +11,9 @@ import android.webkit.JavascriptInterface
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.tencent.smtt.sdk.ValueCallback
 import com.zcdc.webviewtest.service.FloatPrintService
 import com.zcdc.webviewtest.x5.TheX5App
 import com.zcdc.webviewtest.x5.TheX5WebView
-import java.util.*
 
 @SuppressLint("StaticFieldLeak")
 class MainActivity : AppCompatActivity() {
@@ -35,8 +33,6 @@ class MainActivity : AppCompatActivity() {
         mWebView = findViewById(R.id.theWebView)
         mWebView?.addJavascriptInterface(WebAppInterface(this), "Android")
         mWebView?.loadUrl("file:///android_asset/index.html")
-
-
     }
 
     /**
